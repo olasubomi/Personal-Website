@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<title> Pokemon Battle </title>
+		<style type = "text/css"> 
+			img{
+			height: 200px;
+			}
+
+			div{
+			height: 120px;
+			width: 400px;
+			border: 2px solid black;
+			}
+
+			button{
+			height: 50px;
+			width: 200px
+			}
+
+		</style>
+
+		<script type = "text/javascript">
+			var bulbaHP = 950;
+			var pikaHP = 1500;
+
+			var pikaAttackName = "";
+			var pikaAttackPower = 0;
+			var pikaAttackRank = 0;
+
+			var bulbaAttackRank = 0;
+			var bulbaAttackName = "";
+			var bulbaAttackPower = 0;
+			
+			function pikaAttack(){
+				pikaAttackRank = Math.floor((Math.random()*2)+1);
+				if(pikaAttackRank == 1){
+					pikaAttackPower = 190;
+					pikaAttackName = "Thunderbolt";
+				}
+				else if (pikaAttackRank == 2){
+					pikaAttackPower = 110;
+					pikaAttackName = "Slam";
+				}
+				else if (pikaAttackRank == 3){
+					pikaAttackPower = 85;
+					pikaAttackName = "Spark";
+				}
+				else if (pikaAttackRank == 4){
+					pikaAttackPower = 70;
+					pikaAttackName = "ThunderShock";
+				}
+				
+				bulbaHP -= pikaAttackPower;
+				
+				document.getElementById("bulbaHP").innerHTML = "HP" + bulbaHP;
+				document.getElementById("screen").innerHTML += "<p>Pikachu used "
+				+ pikaAttackName+ "! Bulsabar lost "+pikaAttackPower+ "HP.</p>";
+			}
+			
+			function bulbaAttack(){
+				bulbaAttackRank = Math.floor((Math.random()*2)+1);
+				if(bulbaAttackRank == 1){
+					bulbaAttackPower = 150;
+					bulbaAttackName = "Razor Leaf";
+				}
+				else{
+					bulbaAttackPower = 110;
+					bulbaAttackName = "Vine Whip";
+				}
+				
+				pikaHP -= bulbaAttackPower;
+				
+				document.getElementById("pikaHP").innerHTML = "HP" + pikaHP;
+				document.getElementById("screen").innerHTML = "<p>Bulsabar used "
+				+ bulbaAttackName+ "! Pikachu lost "+bulbaAttackPower+ "HP.</p>";
+
+			}
+			
+			function play(){
+				bulbaAttack();
+				pikaAttack();
+			}
+		</script>
+	</head>
+
+	<body><center>
+		<h1> Pokemon Battle: Pikachu vs. Bulbasur </h1>
+		<table> 
+			<tr>
+				<td>Bulsabar <p id = "bulbaHP">HP 950</p></td>
+				<td><img src="bulbasaur.png"></td>
+			</tr>
+			<tr>
+				<td><img src="pikachu.png"></td>
+				<td>Pikachu <p id= "pikaHP">HP 1500</p></td>
+			</tr>
+		</table>
+
+		<div id="screen">
+			<p> What will Pikachu do?</p>
+		</div>
+
+
+		<table> 
+			<tr>
+				<td><button onclick="pikaAttackRank = 1; play();">Thunderbolt</button></td>
+				<td><button onclick="pikaAttackRank = 2; play();">Slam</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="pikaAttackRank = 3; play();">Spark</button></td>
+				<td><button onclick="pikaAttackRank = 4; play();">Thunder Shock</button></td>
+			</tr>
+		</table>
+	</center></body>
+</html>

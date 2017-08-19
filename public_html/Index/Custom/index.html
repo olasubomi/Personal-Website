@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en-US">>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+	<title> Hello World :) </title>
+	<link rel="stylesheet" href="stylesheets/panel.css">
+	<style>
+		body {background-color: black;}
+
+		aside{
+			float: right;
+			overflow: scroll;
+			display: inline;
+		}
+
+		beside{
+			float: left;
+			width: 210px;
+			color: red;
+			font-family: "Courier";
+			font-size: 13px;
+		}
+
+		section{
+			float: right;
+		}
+
+		#image{float: left;}
+
+	</style>
+
+	<script>
+	
+	console.log("starts javascript");
+	var text;
+	var delay;
+	var currentChar;
+	var destination;
+	//to make sure we dont modify hello world after it has been written
+	var text_writing = 1;
+	//to create a cursor and give the illusion of a live cursor
+	var blinking_cursor = 2; 
+
+	function type()
+	{
+	console.log("Comes in type");
+	if (document.getElementById)
+	{
+	    //var dest=document.getElementById(destination);
+	    //if (dest)
+	    //{
+
+		if(text_writing){
+			console.log(document.getElementById(destination).innerHTML);
+
+	      		document.getElementById(destination).innerHTML=text.substr(0, currentChar);
+
+			console.log(document.getElementById(destination).innerHTML);
+
+	      		++currentChar;
+		}
+
+	      if (currentChar>text.length)
+	      {
+	        //currentChar-=2;
+		//console.log("reset");
+	        //setTimeout("type()", 1000);
+
+		//turn text writing off
+		text_writing = 0;
+		//once we have reached the third dot
+		//we want to change the focus from hello world to the cursor
+		text = "  _";
+		destination = "cursor";
+		if(blinking_cursor != 1){
+			blinking_cursor = 1;
+			document.getElementById(destination).innerHTML = '&nbsp';
+		}
+		else{
+			blinking_cursor = 2;
+			document.getElementById(destination).innerHTML = '_';
+		}
+		//delay = 1000;
+
+		//document.getElementById(destination).innerHTML = text.substr(0,blinking_cursor);
+
+		setTimeout("type()", 1000);
+		
+	      }
+	      else
+	      {
+		console.log("char is " + currentChar + "length is " + text.length );
+	        setTimeout("type()", 100);
+	      }
+	    //}
+	  }
+	}
+	function startTyping(textParam, delayParam, destinationParam)
+	{
+	console.log("Comes in startTyping funtion");
+	  text=textParam;
+	  delay=delayParam;
+	  currentChar=0;
+	  destination=destinationParam;
+	console.log("Calls type");
+	  type();
+
+	}
+	</script>
+</head>
+
+
+<body>
+
+<a id = 'welcome_note'; style = "color: rgb(0,255,0); font-family: courier;"> </a> <a id = 'cursor'; style = "color: rgb(0,255,0); font-family: courier;">    </a>
+
+<img src = "Images/giphy.gif" style="width:100px;height:100px;"> 
+
+<br>
+<br>
+
+<div style = "font:iCourier; color: white;"> 
+<span style='color:#25C0EC'>&lt</span>  <span style='color:#FD7D1F'> main </span>  <span style='color:#25C0EC'>&gt</span>
+
+<p style='margin-left: 40px'>Welcome to my home page! My name is Olasubomi Awokoya and most people call me Ola.</p>
+
+<p style='margin-left: 40px'>
+<span style='color:#25C0EC'>&lt</span>  <span style='color:#FF0000'> <i>side_comment </i></span>  <span style='color:#25C0EC'>&gt</span></p>
+
+<p style='margin-left: 80px'>Unless you are Nigerian like me, then you probably call me Subomi  :/</p>
+
+<p style='margin-left: 40px'>
+<span style='color:#25C0EC;'>&lt /</span>  <span style='color:#FF0000'> <i> side_comment </i> </span>  <span style='color:#25C0EC'>&gt</span>
+</p>
+
+<p style= 'margin-left: 40px'>
+I purposely left this page scarce to make my website more user interactive.</p>
+
+<p style= 'margin-left: 40px'>
+<b>Click </b><a href = 'timeline.html'; style='color:#25C0EC';>this</a> <b>or another link to get to know me a little better...</b>  &nbsp <span style="color: rgb(0,255,0)"> :) </span></p> 
+
+<br>
+<span style='color:#25C0EC'>&lt /</span>  <span style='color:#FD7D1F'> main </span>  <span style='color:#25C0EC'>&gt</span>
+</div>
+
+
+<br>
+
+<div>
+            <a href="https://www.facebook.com/subomi.awokoya"><img src="Images/facebook.png" width="50" height="50" ></a>
+            <a href="https://twitter.com/@SubomiFiascoooo"><img src="Images/twitter.png"width="50" height="50"></a>
+            <a href="http://linkedin.com/in/olasubomi-awokoya"><img src="Images/linkedin_logo.png"width="55" height="55"></a>
+</div>
+
+<script>
+
+text="Hello World...";
+destination = "welcome_note";
+startTyping(text, 100, destination);
+
+</script>
+
+</body>
+</html>
