@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 
-<html lang="en-US">>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<html lang="en-US">
 <head>
-	<title> Hello World :) </title>
+<title> Hello World :) </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1", shrink-to-fit="no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+<!-- jquery for navbar dropdown submenu actions -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 	<link rel="stylesheet" href="stylesheets/panel.css">
 	<style>
 		body {background-color: black;}
 
-		aside{
-			float: right;
-			overflow: scroll;
-			display: inline;
+		.dropdown-submenu {
+ 		   position: relative;
 		}
 
-		beside{
-			float: left;
-			width: 210px;
-			color: red;
-			font-family: "Courier";
-			font-size: 13px;
+		.dropdown-submenu .dropdown-menu {
+		    top: 0;
+		    left: 100%;
+		margin-top: -1px;
 		}
 
-		section{
-			float: right;
+		.flex-container {
+                        display: -webkit-flex;
+                        display: flex;
+                        width: 600px;
+                        height: 320px;
+                        justify-content: center;
+                        margin: auto;
+                        flex-wrap: nowrap;
+                        background-color: black;
+                }
+
+
+		#footer{
+			position:fixed 
+			bottom: 0;
+			width: 100%
 		}
-
-		#image{float: left;}
-
 	</style>
 
 	<script>
+
+	text="Hello World...";
+	destination = "welcome_note";
+	startTyping(text, 100, destination);
 	
 	console.log("starts javascript");
 	var text;
@@ -109,11 +127,70 @@
 	  type();
 
 	}
+
+<!-- dropdown menu togglability function on navbar -->
+
+	$(document).ready(function(){
+	  $('.dropdown-submenu a.test').on("click", function(e){
+	    $(this).next('ul').toggle();
+	    e.stopPropagation();
+	    e.preventDefault();
+	  });
+	});
 	</script>
+
+
 </head>
 
 
 <body>
+
+<nav class="navbar sticky-top navbar-dark bg-dark">
+
+<a class="navbar-text" href="../../index.html">Home</a>
+
+ <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Index Page
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">Projects<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="./maps.html"> Custom Maps</a></li>
+          <li><a tabindex="-1" href="#" disabled>Natural Language Processing (NLP)</a></li>
+        </ul>
+
+          <li class="dropdown-submenu">
+            <a class="test" href="#">Games <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="../Labs/Lab8/BlackJack.html"> Blackjack </a></li>
+              <li><a href="../Lab8/Pokemon.html"> Pokemon </a></li>
+            </ul>
+          </li>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!--
+<div class="dropdown">
+	<a class="dropdown-item nav-link dropdown-toggle " href="#" id="projects_dropdown" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="true">Projects</a>
+
+	<div class="dropdown-menu" id="projects_dropdown">
+		<a class = "dropdown-item nav-link" href"#"> Custom Maps </a>
+		<a class = "dropdown-item nav-link" href"#"> Natural Language Processing (NLP) </a>
+	</div>
+
+		<a class="dropdown-item disabled" href="#">Games </a>
+		<div class="dropdown-divider"></div>
+		<a class="dropdown-item disabled" href="#">Feedback</a>
+	</div> -->
+</div>
+
+<a class="navbar-text" href="#">Contact Ola</a>
+
+</nav>
 
 <a id = 'welcome_note'; style = "color: rgb(0,255,0); font-family: courier;"> </a> <a id = 'cursor'; style = "color: rgb(0,255,0); font-family: courier;">    </a>
 
@@ -122,46 +199,175 @@
 <br>
 <br>
 
+
+
+
+<div id="carouselSlides" class="carousel slide" data-ride="carousel">
+
+
+<!--  For order of the prev and next buttons-->
+<ol class="carousel-indicators">
+    <li data-target="#carouselSlides" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselSlides" data-slide-to="1"></li>
+  </ol>
+
+
+
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+
+	<div style = "font:iCourier; color: white;"> 
+	<span style='color:#25C0EC'>&lt</span>  <span style='color:#FD7D1F'> main </span>  <span style='color:#25C0EC'>&gt</span>
+
+	<p style='margin-left: 40px'>Welcome to my home page! My name is Olasubomi Awokoya and most people call me Ola; 
+	<br>unless you are NIgerian like me, then you probably call me Subomi!  &nbsp  <img src = "nigerian_emoji.png" style="width:40px; height:40px; "> </p>
+
+	<p style='margin-left: 40px'>
+	<span style='color:#25C0EC'>&lt</span>  <span style='color:#FF0000'> <i>objective :</i></span>  <span style='color:#25C0EC'>&gt</span></p>
+
+	<p style='margin-left: 80px'>I am a recent Engineering graduate with a minor in Enterpreneurship & Innovation,
+	<br> working to gain more experience in Software Development and Data Analytics </p>
+
+	<p style='margin-left: 40px'>
+		<span style='color:#25C0EC;'>&lt /</span>  <span style='color:#FF0000'> <i>: objective </i> </span>  <span style='color:#25C0EC'>&gt</span>
+	</p>
+
+	<p style= 'margin-left: 40px'>
+	<b>Click </b><a class="right carousel-control" href ="#carouselSlides" data-slide="next" style='color:#25C0EC';>here</a> <b> for a track record of highlighted projects...</b>  &nbsp <a href="./timeline.html"><span style="color: rgb(0,255,0)"> :) </span></a></p> 
+
+	<span style='color:#25C0EC'>&lt /</span>  <span style='color:#FD7D1F'> main </span>  <span style='color:#25C0EC'>&gt</span>
+	</div>
+  </div>
+  <div class="carousel-item">
+
+	<div class="flex-container">
+
+		<div class="flex-item item1">
+        	  <div style= "width:176px; height:30px; background-color:green"><p style= "color:red; font-size: 20px; text-align: center">Timeline</p></div>
+		<table style="border-collapse:collapse;">
+            	<thead>
+                	<tr>
+                	    <th colspan="2"; style="color:green; border-down: 1px solid black; text-align: center;"> &nbsp &nbsp 'My Yearly Highlights' </th>
+                	</tr>
+                	<tr style="border-bottom:1px solid black;">
+                    <!--<th style="padding:5px;"><em>Famous Monster</em></th>
+                    <th style="padding: 5px;border-left:1px solid black;"><em>Birth Year</em></th> -->
+                	</tr>
+            	</thead>
+            	<tbody>
+               	<tr>
+                    <td style="padding:5px;border-right:1px solid white; text-align:right; color: white;"><span class="has-tip tip-top noradius" data-width="210" title = "New Project: Geo Databse Collection">2017</span></td>
+                    <td></td>
+               	 </tr>
+
+                <tr>
+                    <td></td>
+                    <td style="padding:5px;border-left:1px solid white; text-align:left; color: white;"> <span class="has-tip tip-top noradius" data-width="210" title="Current Project">2016</span></td>     
+                </tr>
+    
+                <tr>
+                    <td style="padding:5px;border-right:1px solid white; text-align:right; color:white;"><span class="has-tip tip-top noradius" data-width="210" title = "Summer Analys Inernship"><a href="http://176.32.230.48/nigerianyouthincali.com/">2015</a></span></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td></td>
+                    <td style="padding:5px;border-left:1px solid white;text-align:left; color:white;"><span class="has-tip tip-top noradius" data-width="210" title="Global Game Jam"><a href="http://globalgamejam.org/2014/games/candy-crash">2014</a></span></td>
+                </tr>
+
+                <tr>
+                <td style="padding:5px;border-right:1px solid white; text-align:right; color:white;"><span class="has-tip tip-top noradius" data-width="210" title = "2013 Special Olympics"><a href="http://sonigeriateam.webs.com">2013</a></span></td>
+                    <td></td>
+                </tr>
+
+
+            	</tbody>
+        </table>
+        <div style= "width:176px; height:30px; background-color:green"><p style= "color:red; font-size: 20px; text-align: center"> coming soon...</p></div>
+	</div>
+
+
+    </div>
+  </div>
+
+<!-- LEft and right controls 
+<a class="carousel-control-prev" href="#carouselSlides" role="button" data-slide-to=0>
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselSlides" role="button" data-slide-to=1>
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+-->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
 <div style = "font:iCourier; color: white;"> 
 <span style='color:#25C0EC'>&lt</span>  <span style='color:#FD7D1F'> main </span>  <span style='color:#25C0EC'>&gt</span>
 
-<p style='margin-left: 40px'>Welcome to my home page! My name is Olasubomi Awokoya and most people call me Ola.</p>
+<p style='margin-left: 40px'>Welcome to my home page! My name is Olasubomi Awokoya and most people call me Ola; 
+<br>unless you are NIgerian like me, then you probably call me Subomi!  &nbsp  <img src = "nigerian_emoji.png" style="width:40px; height:40px; "> </p>
 
 <p style='margin-left: 40px'>
-<span style='color:#25C0EC'>&lt</span>  <span style='color:#FF0000'> <i>side_comment </i></span>  <span style='color:#25C0EC'>&gt</span></p>
+<span style='color:#25C0EC'>&lt</span>  <span style='color:#FF0000'> <i>objective :</i></span>  <span style='color:#25C0EC'>&gt</span></p>
 
-<p style='margin-left: 80px'>Unless you are Nigerian like me, then you probably call me Subomi  :/</p>
+<p style='margin-left: 80px'>I am a recent Engineering graduate with a minor in Enterpreneurship & Innovation,
+<br> working to gain more experience in Software Development and Data Analytics </p>
 
 <p style='margin-left: 40px'>
-<span style='color:#25C0EC;'>&lt /</span>  <span style='color:#FF0000'> <i> side_comment </i> </span>  <span style='color:#25C0EC'>&gt</span>
+<span style='color:#25C0EC;'>&lt /</span>  <span style='color:#FF0000'> <i>: objective </i> </span>  <span style='color:#25C0EC'>&gt</span>
 </p>
 
 <p style= 'margin-left: 40px'>
-I purposely left this page scarce to make my website more user interactive.</p>
-
-<p style= 'margin-left: 40px'>
-<b>Click </b><a href = 'timeline.html'; style='color:#25C0EC';>this</a> <b>or another link to get to know me a little better...</b>  &nbsp <span style="color: rgb(0,255,0)"> :) </span></p> 
+<b>Click </b><a href = 'timeline.html'; style='color:#25C0EC';>here</a> <b> for a track record of highlighted projects...</b>  &nbsp <span style="color: rgb(0,255,0)"> :) </span></p> 
 
 <br>
 <span style='color:#25C0EC'>&lt /</span>  <span style='color:#FD7D1F'> main </span>  <span style='color:#25C0EC'>&gt</span>
 </div>
-
+-->
 
 <br>
 
-<div>
+<div id =footer>
             <a href="https://www.facebook.com/subomi.awokoya"><img src="Images/facebook.png" width="50" height="50" ></a>
             <a href="https://twitter.com/@SubomiFiascoooo"><img src="Images/twitter.png"width="50" height="50"></a>
             <a href="http://linkedin.com/in/olasubomi-awokoya"><img src="Images/linkedin_logo.png"width="55" height="55"></a>
 </div>
 
-<script>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-text="Hello World...";
-destination = "welcome_note";
-startTyping(text, 100, destination);
-
-</script>
 
 </body>
 </html>
