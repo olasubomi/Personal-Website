@@ -1,0 +1,276 @@
+<html>
+
+<body>
+
+    <div id="react-test"></div>
+
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</body>
+<style>
+    #monthly-bill-input
+{
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+}
+</style>
+<script>
+var annualElectricBillToMaxSavingsPercent = {
+500	: [0.2908767911,0.3408767911,0.3908767911,0.4408767911,0.4908767911,0.5408767911,0.5908767911],
+1000 : [0.3625120778,0.4125120778,0.4625120778,0.5125120778,0.5625120778,0.6125120778,0.6625120778],
+2000 : [0.3017571977,0.3517571977,0.4017571977,0.4517571977,0.5017571977,0.5517571977,0.6017571977],
+3000 : [0.3051803724,0.3551803724,0.4051803724,0.4551803724,0.5051803724,0.5551803724,0.6051803724],
+4000 : [0.3911398248,0.4411398248,0.4911398248,0.5411398248,0.5911398248,0.6411398248,0.6911398248],
+5000 : [0.3259427715,0.3759427715,0.4259427715,0.4759427715,0.5259427715,0.5759427715,0.6259427715],
+6000 : [0.3770979879,0.4270979879,0.4770979879,0.5270979879,0.5770979879,0.6270979879,0.6770979879],
+7000 : [0.3823133444,0.4323133444,0.4823133444,0.5323133444,0.5823133444,0.6323133444,0.6823133444],
+8000 : [0.37,0.42,0.47,0.52,0.57,0.62,0.67],
+9000 : [0.363663385,0.413663385,0.463663385,0.513663385,0.563663385,0.613663385,0.663663385],
+10000 : [0.3756,0.4256,0.4756,0.5256,0.5756,0.6256,0.6756],
+11000 : [0.3803636364,0.4303636364,0.4803636364,0.5303636364,0.5803636364,0.6303636364,0.6803636364],
+12000 : [0.386,0.436,0.486,0.536,0.586,0.636,0.686],
+13000 : [0.3923076923,0.4423076923,0.4923076923,0.5423076923,0.5923076923,0.6423076923,0.6923076923],
+14000 : [0.3991428571,0.4491428571,0.4991428571,0.5491428571,0.5991428571,0.6491428571,0.6991428571],
+15000 : [0.4064,0.4564,0.5064,0.5564,0.6064,0.6564,0.7064],
+16000 : [0.414,0.464,0.514,0.564,0.614,0.664,0.714],
+17000 : [0.4218823529,0.4718823529,0.5218823529,0.5718823529,0.6218823529,0.6718823529,0.7218823529],
+18000 : [0.43,0.48,0.53,0.58,0.63,0.68,0.73],
+19000 : [0.4383157895,0.4883157895,0.5383157895,0.5883157895,0.6383157895,0.6883157895,0.7383157895],
+20000 : [0.4468,0.4968,0.5468,0.5968,0.6468,0.6968,0.7468],
+21000 : [0.4554285714,0.5054285714,0.5554285714,0.6054285714,0.6554285714,0.7054285714,0.7554285714],
+22000 : [0.4641818182,0.5141818182,0.5641818182,0.6141818182,0.6641818182,0.7141818182,0.7641818182],
+23000 : [0.4730434783,0.5230434783,0.5730434783,0.6230434783,0.6730434783,0.7230434783,0.7730434783],
+24000 : [0.482,0.532,0.582,0.632,0.682,0.732,0.782],
+25000 : [0.48032,0.53032,0.58032,0.63032,0.68032,0.73032,0.78032],
+26000 : [0.4787692308,0.5287692308,0.5787692308,0.6287692308,0.6787692308,0.7287692308,0.7787692308],
+27000 : [0.4773333333,0.5273333333,0.5773333333,0.6273333333,0.6773333333,0.7273333333,0.7773333333],
+28000 : [0.476,0.526,0.576,0.626,0.676,0.726,0.776],
+29000 : [0.4747586207,0.5247586207,0.5747586207,0.6247586207,0.6747586207,0.7247586207,0.7747586207],
+30000 : [0.4736,0.5236,0.5736,0.6236,0.6736,0.7236,0.7736],
+31000 : [0.472516129,0.522516129,0.572516129,0.622516129,0.672516129,0.722516129,0.772516129],
+32000 : [0.4715,0.5215,0.5715,0.6215,0.6715,0.7215,0.7715],
+33000 : [0.4705454545,0.5205454545,0.5705454545,0.6205454545,0.6705454545,0.7205454545,0.7705454545],
+34000 : [0.4696470588,0.5196470588,0.5696470588,0.6196470588,0.6696470588,0.7196470588,0.7696470588],
+35000 : [0.4688,0.5188,0.5688,0.6188,0.6688,0.7188,0.7688],
+36000 : [0.468,0.518,0.568,0.618,0.668,0.718,0.768],
+37000 : [0.4672432432,0.5172432432,0.5672432432,0.6172432432,0.6672432432,0.7172432432,0.7672432432],
+38000 : [0.4665263158,0.5165263158,0.5665263158,0.6165263158,0.6665263158,0.7165263158,0.7665263158],
+39000 : [0.4658461538,0.5158461538,0.5658461538,0.6158461538,0.6658461538,0.7158461538,0.7658461538],
+40000 : [0.4652,0.5152,0.5652,0.6152,0.6652,0.7152,0.7652],
+41000 : [0.4645853659,0.5145853659,0.5645853659,0.6145853659,0.6645853659,0.7145853659,0.7645853659],
+42000 : [0.464,0.514,0.564,0.614,0.664,0.714,0.764],
+43000 : [0.4634418605,0.5134418605,0.5634418605,0.6134418605,0.6634418605,0.7134418605,0.7634418605],
+44000 : [0.4629090909,0.5129090909,0.5629090909,0.6129090909,0.6629090909,0.7129090909,0.7629090909],
+45000 : [0.4624,0.5124,0.5624,0.6124,0.6624,0.7124,0.7624],
+46000 : [0.4619130435,0.5119130435,0.5619130435,0.6119130435,0.6619130435,0.7119130435,0.7619130435],
+47000 : [0.4614468085,0.5114468085,0.5614468085,0.6114468085,0.6614468085,0.7114468085,0.7614468085],
+48000 : [0.461,0.511,0.561,0.611,0.661,0.711,0.761],
+49000 : [0.4605714286,0.5105714286,0.5605714286,0.6105714286,0.6605714286,0.7105714286,0.7605714286],
+50000 : [0.46016,0.51016,0.56016,0.61016,0.66016,0.71016,0.76016]
+}
+var chart = null;
+var createChart = function(containerString, data){
+    // data will be an array of values, [12121, 121212, 13123123...]
+    chart = Highcharts.chart(containerString, {
+    title: {
+        text: 'Total Savings by Month'
+    },
+
+    subtitle: {
+        text: 'Makello\'s Proprietary Cost Saving Advantage'
+    },
+    chart: {
+        type: 'column'
+    },
+    xAxis      : { 
+            min:Date.UTC(2018, 0, 0),
+            // max:Date.UTC(2018, 11, 1),
+            allowDecimals: false,
+	// offset: -150,
+            type           : 'datetime',
+            tickInterval   : 24 * 3600 * 1000*30, //one month
+            labels         : {
+                rotation : 0
+            }
+            },
+
+    yAxis: {
+        title: {
+            text: 'Total Savings'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: Date.UTC(2018,0,1),
+            pointInterval   : 24 * 3600 * 1000*30
+        }
+    },
+    series: [{
+        name: 'Total Monthly Savings',
+        data: data,
+	// dashStyle:'LongDash' 
+    }],
+});
+}
+    
+    var view_savings = React.createClass({
+        getInitialState: function() {
+            return this.state = {
+                monthlyBillingAmount: 38000, // This amount will eventually be dynamically generated.
+		system_size: 2 
+            };
+        },
+        handleChange: function(event) {
+            this.setState({monthlyBillingAmount: event.target.value})
+        },
+
+        handleSystemSizeChange: function(event) {
+            this.setState({system_size: event.target.value})
+        },
+        render: function() {
+            return (
+                React.createElement('div', {},
+                    React.createElement('div', {}, 'Monthly: ', React.createElement(MonthlyBill, {
+                        monthlyBillings: this.state.monthlyBillingAmount,
+                        handleChange: this.handleChange
+                    }, null)),
+                    React.createElement(SavingsRate, {monthlyBillings: this.state.monthlyBillingAmount}, null),
+                    React.createElement(Savings, {
+                        monthlyBillings: this.state.monthlyBillingAmount
+                    }, null),
+                    React.createElement('div', {id: 'chartContainer'}, React.createElement(Chart, {monthlyBillings: this.state.monthlyBillingAmount, system_size: this.state.system_size}, null)),
+                    React.createElement('div', {}, React.createElement(Slider, {handleChange: this.handleSystemSizeChange}, null)),
+                    React.createElement(getReportBtn, {}, null)
+                )
+            );
+        }
+    });
+
+    var SavingsRate = React.createClass({
+        render: function() {
+            // Monthly billing amount is this.props.monthlyBillings
+            let buckets = Object.keys(annualElectricBillToMaxSavingsPercent).sort();
+            let monthlyRatePercentage = 0;
+            for (var i = 0; i < buckets.length; i++){
+                if (buckets[i] > this.props.monthlyBillings){
+                        monthlyRatePercentage = annualElectricBillToMaxSavingsPercent[buckets[i]]
+                        i = buckets.length;
+                }
+            }
+            return React.createElement('div', {}, 'Your monthly savings rate: ' + monthlyRatePercentage);
+        }
+    });
+    var MonthlyBill = React.createClass({
+        render: function() {
+            return React.createElement('input', {
+                type: 'text',
+                value: this.props.monthlyBillings,
+                onChange: this.props.handleChange,
+                id: 'monthly-bill-input'
+            }, null);
+        }
+    });
+
+    var Savings = React.createClass({
+        render: function() {
+            return React.createElement('h2', {}, 'Cost Savings: ' + (this.props.monthlyBillings * 12));
+        }
+    });
+
+    var Chart = React.createClass({
+	get_system_size_data: function(){
+            var numberOfMonthsInAYear = 12;
+            var down_payment = 90000;
+            var system_size_percentages=[];
+            var fixed_cost_savings_amt = 0;
+            var cost_savings_data = [];
+
+             let buckets = Object.keys(annualElectricBillToMaxSavingsPercent).sort();
+
+            // find monthly billing bucket
+             for (var i = 0; i < buckets.length; i++){
+                 if (buckets[i] > (this.props.monthlyBillings)){
+                         // get percentage for smallest/all system sizes(nested)
+                         system_size_percentages = annualElectricBillToMaxSavingsPercent[buckets[i]];
+                         // set the fixed amt to deduct from curr cost savings
+                        fixed_cost_savings_amt = system_size_percentages[this.props.system_size]*buckets[i];
+			console.log(system_size_percentages[this.props.system_size]);
+			console.log(buckets[i]);
+			console.log(fixed_cost_savings_amt);
+                         //console.log(system_size_percentages);
+                         console.log(buckets[i]);
+                         var curr_cost_savings_amt = -down_payment;
+
+                         for(var j = 0; curr_cost_savings_amt < down_payment; j++){
+                             // append to cost savings data array
+                             cost_savings_data.push(curr_cost_savings_amt);
+                             // set current total savings
+                             curr_cost_savings_amt += fixed_cost_savings_amt;
+                             // break statement to end
+                             //if(curr_cost_savings_amt >= down_payment){
+                                 //console.log("Ever comes in here");
+                             //}
+                         }
+                         // break statement to exit for loop
+                         i = buckets.length;
+                         console.log(cost_savings_data);
+                 }
+             }
+
+		return cost_savings_data;
+
+	},
+
+
+        componentDidMount: function(){
+	    cost_savings_data = this.get_system_size_data();
+            createChart('chartContainer', cost_savings_data);
+        },
+
+        render: function() {
+            if (chart){
+                chart.series[0].setData(this.get_system_size_data(),true);
+            }
+            
+            return null;
+        }
+    });
+
+    var Slider = React.createClass({
+        render: function() {
+            return React.createElement('input', {
+      //id="typeinp" ,
+      min:"0",
+	max:"2",
+      //value:this.state.value,
+      onChange:this.props.handleChange,
+      step:"1",
+                type: "range"
+            }, null);
+        }
+    });
+
+    var getReportBtn = React.createClass({
+        render: function() {
+            return React.createElement('button', {
+                id: 'btn'
+            }, "Get Your Custom Makello Report");
+        }
+    });
+
+    ReactDOM.render(
+        React.createElement(view_savings, {}), document.getElementById('react-test'));
+</script>
+
+</html>
