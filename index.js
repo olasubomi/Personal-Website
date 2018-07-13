@@ -17,6 +17,6 @@ const config = {
 express()
   .use(express.static(path.join(__dirname, 'public_html')))
   .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
-  .get('/', (req, res) => console.log('Hello World!'))
+  .get('/', (req, res) => res.send('Hello World!'))
+  //.get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
