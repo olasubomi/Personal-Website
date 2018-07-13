@@ -1,10 +1,9 @@
 {
-  "name": "Personal-Websited",
-  "version": "0.3.0",
+  "name": "Personal-Website",
+  "version": "1.0.0",
   "description": "website to showcase some of the skills I am learning over the next few months",
   "engines": {
-    "node": "8.9.x",
-    "npm": "5.5.x"
+    "node": "8.9.1",
   },
   "main": "index.js",
   "scripts": {
@@ -16,6 +15,7 @@
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.16.3",
+    "npm": "^6.1.0",
     "pg": "^7.4.3"
   },
   "devDependencies": {
