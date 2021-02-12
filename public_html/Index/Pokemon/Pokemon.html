@@ -6,11 +6,11 @@
 			height: 200px;
 			}
 
-			div{
+			/* div{
 			height: 120px;
 			width: 400px;
 			border: 2px solid black;
-			}
+			} */
 
 			.button{
 			height: 50px;
@@ -131,9 +131,21 @@
 
 			}
 		</script>
+		<link rel="stylesheet" href="../../components/header/header.css">
 	</head>
 
-	<body><center>
+	<body>
+		<header></header>
+		<script>
+		   fetch("../../components/header/header.html")
+			  .then(response => {
+				return response.text()
+			  })
+			  .then(data => {
+				document.querySelector("header").innerHTML = data;
+			  });
+		  </script>
+		<center>
 		<h1> Pokemon Battle: Pikachu vs. Bulbasur </h1>
 		<table> 
 			<tr>

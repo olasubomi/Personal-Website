@@ -40,7 +40,7 @@
 
 
 		#footer{
-			position:fixed 
+			position:fixed ;
 			bottom: 0;
 			width: 100%
 		}
@@ -128,7 +128,7 @@
 
 	}
 
-<!-- dropdown menu togglability function on navbar -->
+// <!-- dropdown menu togglability function on navbar -->
 
 	$(document).ready(function(){
 	  $('.dropdown-submenu a.test').on("click", function(e){
@@ -138,62 +138,25 @@
 	  });
 	});
 	</script>
-
+		<link rel="stylesheet" href="../components/header/header.css">
 
 </head>
 
 
-<body>
+<body style="background-color: black;">
+<header></header>
 
-<nav class="navbar sticky-top navbar-dark bg-dark">
-
-<a class="navbar-text" href="../../index.html">Home</a>
-
- <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Index Page
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li class="dropdown-submenu">
-        <a class="test" tabindex="-1" href="#">Projects<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a tabindex="-1" href="./maps.html"> Custom Maps</a></li>
-          <li><a tabindex="-1" href="https://still-ridge-43112.herokuapp.com">Natural Language Processing (NLP)</a></li>
-        </ul>
-
-          <li class="dropdown-submenu">
-            <a class="test" href="#">Games <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="../Labs/Lab8/BlackJack.html"> Blackjack </a></li>
-              <li><a href="../Lab8/Pokemon.html"> Pokemon </a></li>
-            </ul>
-          </li>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-<!--
-<div class="dropdown">
-	<a class="dropdown-item nav-link dropdown-toggle " href="#" id="projects_dropdown" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="true">Projects</a>
-
-	<div class="dropdown-menu" id="projects_dropdown">
-		<a class = "dropdown-item nav-link" href"#"> Custom Maps </a>
-		<a class = "dropdown-item nav-link" href"#"> Natural Language Processing (NLP) </a>
-	</div>
-
-		<a class="dropdown-item disabled" href="#">Games </a>
-		<div class="dropdown-divider"></div>
-		<a class="dropdown-item disabled" href="#">Feedback</a>
-	</div> -->
-</div>
-
-<a class="navbar-text" href="#">Contact Ola</a>
-
-</nav>
-
-<a id = 'welcome_note'; style = "color: rgb(0,255,0); font-family: courier;"> </a> <a id = 'cursor'; style = "color: rgb(0,255,0); font-family: courier;">    </a>
-
+<a id = 'welcome_note'; style = "color: rgb(0,255,0); font-family: courier;"> </a>
+<a id = 'cursor'; style = "color: rgb(0,255,0); font-family: courier;"> </a>
+<script>
+ fetch("../components/header/header.html")
+	 .then(response => {
+	   return response.text()
+	 })
+	 .then(data => {
+	   document.querySelector("header").innerHTML = data;
+	 });
+   </script>
 <img src = "Images/giphy.gif" style="width:100px;height:100px;"> 
 
 <br>
@@ -220,7 +183,7 @@
 	<div style = "font:iCourier; color: white;"> 
 	<span style='color:#25C0EC'>&lt</span>  <span style='color:#FD7D1F'> main </span>  <span style='color:#25C0EC'>&gt</span>
 
-	<p style='margin-left: 40px'>Welcome to my home page! My name is Olasubomi Awokoya and most people call me Ola; 
+	<p style='margin-left: 40px'>Welcome to my AWO Web Brands page! My name is Olasubomi Awokoya and most people call me Ola; 
 	<br>unless you are NIgerian like me, then you probably call me Subomi!  &nbsp  <img src = "nigerian_emoji.png" style="width:40px; height:40px; "> </p>
 
 	<p style='margin-left: 40px'>
@@ -311,24 +274,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--
 
 
@@ -357,11 +302,20 @@
 -->
 
 <br>
-
+<!-- <script>
+	fetch("/Index/components/footer/footer.html")
+		.then(response => {
+		  return response.text()
+		})
+		.then(data => {
+		  document.querySelector("footer").innerHTML = data;
+		});
+</script>
+	  <footer></footer> -->
 <div id =footer>
-            <a href="https://www.facebook.com/subomi.awokoya"><img src="Images/facebook.png" width="50" height="50" ></a>
-            <a href="https://twitter.com/@SubomiFiascoooo"><img src="Images/twitter.png"width="50" height="50"></a>
-            <a href="http://linkedin.com/in/olasubomi-awokoya"><img src="Images/linkedin_logo.png"width="55" height="55"></a>
+	<a href="https://www.facebook.com/subomi.awokoya"><img src="Images/facebook.png" width="50" height="50" ></a>
+	<a href="https://twitter.com/@SubomiFiascoooo"><img src="Images/twitter.png"width="50" height="50"></a>
+	<a href="http://linkedin.com/in/olasubomi-awokoya"><img src="Images/linkedin_logo.png"width="55" height="55"></a>
 </div>
 
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

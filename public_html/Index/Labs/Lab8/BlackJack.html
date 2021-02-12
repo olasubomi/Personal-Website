@@ -111,12 +111,24 @@
 			
 			}
 		</script>
+		<hr width="50%"/>
+		<link rel="stylesheet" href="../../../components/header/header.css">
+
+	</head>
+	<body>
+		<header></header>
 		<center>
 			<h1>Welcome to Black Jack!</h1>
 		</center>
-		<hr width="50%"/>
-	</head>
-	<body>
+		<script>
+		   fetch("../../../components/header/header.html")
+			  .then(response => {
+				return response.text()
+			  })
+			  .then(data => {
+				document.querySelector("header").innerHTML = data;
+			  });
+		  </script>
 		<center>
 			<table>
 				<tr>

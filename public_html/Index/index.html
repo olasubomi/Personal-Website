@@ -15,16 +15,27 @@
 		</style>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<!-- requires relative path -->
+	<link rel="stylesheet" href="/components/header/header.css">
 
 	</head>
 	
-	<body>
+	<body style="background-color: black;">
 
-<nav class="navbar sticky-top navbar-dark bg-dark" >
-  <!-- Navbar content -->
-<a class="navbar-brand" href="../index.html">Home</a>
-<a class="navbar-brand" href="#">Index_Page</a>
-<a class="navbar-brand" href="./Custom">Custom Page</a>
+ <!--  call header file -->
+ <header></header>
+<script>
+//  fetch("../components/header/header.html")
+
+ fetch("/components/header/header.html")
+.then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("header").innerHTML = data;
+  });
+</script>
+
 </nav>
 		<h1 align="center"> My Web-Index Page</h1>
 		<table class ="table tables-triped" border="2px">
@@ -37,7 +48,7 @@
 		</tr>
 		<tr>
 			<td> <ul>
-					<li> <a href="./Custom">My Custom Homepage</a></li>
+					<li> <a href="./Custom/custom_index.html">My Custom Homepage</a></li>
 				</ul>
 			</td>
 			<td> p_project </td>
@@ -109,6 +120,16 @@
 		
 		</table>
 
+		<!-- <script>
+			fetch("/Index/components/footer/footer.html")
+			 .then(response => {
+			   return response.text()
+			 })
+			 .then(data => {
+			   document.querySelector("footer").innerHTML = data;
+			 });
+		   </script>
+ <footer></footer> -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
