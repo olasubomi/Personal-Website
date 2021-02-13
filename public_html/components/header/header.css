@@ -193,6 +193,154 @@ body.header-compressed .dusk-header .logo img {
 	.desktop-nav {
 		display: none
 	}
+	.mobile-nav {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 14;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		overflow-x: hidden;
+		overflow-y: auto;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		background: rgba(255, 255, 255, 0.97);
+		box-sizing: border-box
+	}
+	.mobile-nav.animating,
+	.mobile-nav.visible {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: -ms-flex;
+		display: flex
+	}
+	.mobile-nav.animating-in,
+	.mobile-nav.animating-out {
+		-webkit-transform: translate(-100%, 0);
+		-ms-transform: translate(-100%, 0);
+		-o-transform: translate(-100%, 0);
+		transform: translate(-100%, 0);
+		transition: transform 0.3s ease
+	}
+	.mobile-nav.visible {
+		-webkit-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		-o-transform: translate(0, 0);
+		transform: translate(0, 0)
+	}
+	.mobile-nav ul {
+		list-style: none
+	}
+	.mobile-nav .wsite-menu-default {
+		-webkit-flex-grow: 2;
+		-ms-flex-grow: 2;
+		flex-grow: 2;
+		padding: 0 40px 40px;
+		overflow-y: auto;
+		text-align: center
+	}
+	.mobile-nav a {
+		text-decoration: none
+	}
+	.mobile-nav .has-submenu {
+		position: relative;
+		padding: 0 30px
+	}
+	.mobile-nav .wsite-menu-item {
+		font-family: "Poppins", sans-serif;
+		color: #4f4f4e;
+		margin-bottom: 0.75em;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: normal;
+		letter-spacing: 0.1em;
+		display: inline-block;
+		margin-top: 15px;
+		margin-bottom: 0;
+		text-transform: uppercase
+	}
+	.mobile-nav .wsite-menu-item+.icon-caret {
+		margin-left: 0
+	}
+	.mobile-nav .icon-caret {
+		-webkit-transition: transform 0.3s ease;
+		-o-transition: transform 0.3s ease;
+		transition: transform 0.3s ease;
+		position: absolute;
+		top: 13px;
+		right: 0;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		background: url(./img/arrow.svg) no-repeat center center
+	}
+	body.wsite-theme-dark .mobile-nav .icon-caret {
+		background-image: url(./img/arrow-light.svg)
+	}
+	.mobile-nav .icon-caret.is-active {
+		-webkit-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg)
+	}
+	.mobile-nav .wsite-menu-wrap {
+		margin-top: 10px
+	}
+	.mobile-nav .wsite-menu-wrap.animating,
+	.mobile-nav .wsite-menu-wrap.visible {
+		display: block !important
+	}
+	.mobile-nav .wsite-menu-wrap.animating-in,
+	.mobile-nav .wsite-menu-wrap.animating-out {
+		opacity: 0;
+		transition: all 0.3s ease
+	}
+	.mobile-nav .wsite-menu-wrap.visible {
+		opacity: 1
+	}
+	.mobile-nav .wsite-menu-wrap .icon-caret {
+		top: 3px
+	}
+	.mobile-nav .wsite-menu-arrow {
+		display: none
+	}
+	.mobile-nav .wsite-menu-subitem {
+		font-weight: normal;
+		font-size: 18px;
+		color: #717170
+	}
+	.mobile-nav #wsite-nav-login-a svg {
+		display: none
+	}
+	.mobile-nav .wsite-search {
+		padding: 30px 9vw;
+		text-align: center;
+		border-top: 1px solid #e5e5e5
+	}
+	.mobile-nav #wsite-header-search-form {
+		display: inline-block;
+		width: 100%
+	}
+	.mobile-nav .wsite-search-input {
+		font-family: "Poppins", sans-serif;
+		width: 230px;
+		font-size: 14px;
+		background: none;
+		border: 0;
+		color: #717170
+	}
+	.mobile-nav-toggle {
+		-webkit-align-self: flex-end;
+		-ms-align-self: flex-end;
+		align-self: flex-end;
+		padding: 20px;
+		background-color: transparent;
+		border: 0;
+		color: #4f4f4e
+	}
 }
 .desktop-nav ul {
 	list-style-type: none

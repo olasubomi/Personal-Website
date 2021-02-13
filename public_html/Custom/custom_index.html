@@ -145,18 +145,18 @@
 
 <body style="background-color: black;">
 <header></header>
-
+<script>
+	fetch("../components/header/header.html")
+		.then(response => {
+		  return response.text()
+		})
+		.then(data => {
+		  document.querySelector("header").innerHTML = data;
+		});
+</script>
 <a id = 'welcome_note'; style = "color: rgb(0,255,0); font-family: courier;"> </a>
 <a id = 'cursor'; style = "color: rgb(0,255,0); font-family: courier;"> </a>
-<script>
- fetch("../components/header/header.html")
-	 .then(response => {
-	   return response.text()
-	 })
-	 .then(data => {
-	   document.querySelector("header").innerHTML = data;
-	 });
-   </script>
+
 <img src = "Images/giphy.gif" style="width:100px;height:100px;"> 
 
 <br>
@@ -302,8 +302,8 @@
 -->
 
 <br>
-<!-- <script>
-	fetch("/Index/components/footer/footer.html")
+<script>
+	fetch("../components/footer/footer.html")
 		.then(response => {
 		  return response.text()
 		})
@@ -311,12 +311,7 @@
 		  document.querySelector("footer").innerHTML = data;
 		});
 </script>
-	  <footer></footer> -->
-<div id =footer>
-	<a href="https://www.facebook.com/subomi.awokoya"><img src="Images/facebook.png" width="50" height="50" ></a>
-	<a href="https://twitter.com/@SubomiFiascoooo"><img src="Images/twitter.png"width="50" height="50"></a>
-	<a href="http://linkedin.com/in/olasubomi-awokoya"><img src="Images/linkedin_logo.png"width="55" height="55"></a>
-</div>
+	  <footer></footer>
 
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
