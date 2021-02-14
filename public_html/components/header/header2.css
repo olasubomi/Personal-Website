@@ -2994,6 +2994,13 @@ body.header-compressed .dusk-header .container {
 	text-align: left;
 	color: #4f4f4e
 }
+.hamburger {
+	padding: 8px;
+	background-color: transparent;
+	border: 0;
+	text-align: left;
+	color: #4f4f4e
+}
 .dusk-header .logo {
 	line-height: 1
 }
@@ -3073,6 +3080,7 @@ body.header-compressed .dusk-header .logo img {
 }
 @media screen and (max-width: 1024px) {
 	.dusk-header .hamburger,
+	.hamburger,
 	.dusk-header .site-utils {
 		-webkit-flex-basis: 100px;
 		-ms-flex-basis: 100px;
@@ -3099,6 +3107,9 @@ body.header-compressed .dusk-header .logo img {
 }
 @media screen and (min-width: 1025px) {
 	.dusk-header .hamburger {
+		display: none
+	}
+	.hamburger {
 		display: none
 	}
 }
