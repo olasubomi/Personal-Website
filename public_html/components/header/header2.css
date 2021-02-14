@@ -2986,19 +2986,7 @@ body.sticky-nav-on .dusk-header {
 body.header-compressed .dusk-header .container {
 	height: 80px
 }
-@media screen and (max-width: 1024px) {
-	.dusk-header .container {
-		-webkit-transition: all 0.2s ease;
-		-o-transition: all 0.2s ease;
-		transition: all 0.2s ease;
-		height: 93px;
-		padding-right: 20px;
-		padding-left: 20px
-	}
-	body.header-compressed .dusk-header .container {
-		height: 65px
-	}
-}
+
 .dusk-header .hamburger {
 	padding: 8px;
 	background-color: transparent;
@@ -3006,18 +2994,8 @@ body.header-compressed .dusk-header .container {
 	text-align: left;
 	color: #4f4f4e
 }
-@media screen and (min-width: 1025px) {
-	.dusk-header .hamburger {
-		display: none
-	}
-}
 .dusk-header .logo {
 	line-height: 1
-}
-@media screen and (min-width: 1025px) {
-	.dusk-header .logo {
-		margin-right: 40px
-	}
 }
 .dusk-header .logo .wsite-logo {
 	vertical-align: auto !important
@@ -3032,31 +3010,15 @@ body.header-compressed .dusk-header .container {
 	font-size: 26px;
 	font-weight: bold
 }
-@media screen and (min-width: 1025px) {
-	.dusk-header .logo a {
-		font-size: 36px
-	}
+body.header-compressed .dusk-header .logo img {
+	max-height: 50px
 }
 .dusk-header .logo img {
 	display: block;
 	overflow: hidden;
 	max-height: 70px
 }
-body.header-compressed .dusk-header .logo img {
-	max-height: 50px
-}
-@media screen and (max-width: 1024px) {
-	.dusk-header .hamburger,
-	.dusk-header .site-utils {
-		-webkit-flex-basis: 100px;
-		-ms-flex-basis: 100px;
-		flex-basis: 100px;
-		-ms-flex-pack: end;
-		-webkit-justify-content: flex-end;
-		-ms-justify-content: flex-end;
-		justify-content: flex-end
-	}
-}
+
 .dusk-header .icon-search,
 .dusk-header .login-link svg {
 	width: auto;
@@ -3108,6 +3070,48 @@ body.header-compressed .dusk-header .logo img {
 }
 .dusk-header .wsite-search-button {
 	display: none
+}
+@media screen and (max-width: 1024px) {
+	.dusk-header .hamburger,
+	.dusk-header .site-utils {
+		-webkit-flex-basis: 100px;
+		-ms-flex-basis: 100px;
+		flex-basis: 100px;
+		-ms-flex-pack: end;
+		-webkit-justify-content: flex-end;
+		-ms-justify-content: flex-end;
+		justify-content: flex-end
+	}
+	.dusk-header .container {
+		-webkit-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+		height: 93px;
+		padding-right: 20px;
+		padding-left: 20px
+	}
+	body.header-compressed .dusk-header .container {
+		height: 65px
+	}
+	.dusk-header .login-link {
+		display: none !important
+	}
+}
+@media screen and (min-width: 1025px) {
+	.dusk-header .hamburger {
+		display: none
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.dusk-header .logo {
+		margin-right: 40px
+	}
+}
+@media screen and (min-width: 1025px) {
+	.dusk-header .logo a {
+		font-size: 36px
+	}
 }
 .site-utils {
 	display: -webkit-flex;
@@ -3166,11 +3170,6 @@ body.has-site-search .search-toggle {
 .dusk-header .login-link {
 	margin-left: 30px;
 	line-height: 1
-}
-@media screen and (max-width: 1024px) {
-	.dusk-header .login-link {
-		display: none !important
-	}
 }
 .login-link #member-login {
 	position: absolute;
