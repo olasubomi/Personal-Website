@@ -3424,10 +3424,10 @@ body.header-compressed.more-nav-on .desktop-nav .wsite-menu-item {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
-	background: url(./img/arrow.svg) no-repeat center center
+	background: url(../../assets/img/arrow-light.svg) no-repeat center center
 }
 body.wsite-theme-dark .mobile-nav .icon-caret {
-	background-image: url(./img/arrow-light.svg)
+	background-image: url(../../assets/img/arrow-light.svg)
 }
 .mobile-nav .icon-caret.is-active {
 	-webkit-transform: rotate(180deg);
