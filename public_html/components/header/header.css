@@ -682,9 +682,9 @@ body.header-compressed.more-nav-on .desktop-nav .wsite-menu-item {
 	.dusk-header .hamburger,
 	.hamburger, .site-utils,
 	.dusk-header .site-utils {
-		-webkit-flex-basis: 100px;
-		-ms-flex-basis: 100px;
-		flex-basis: 100px;
+		-webkit-flex-basis: 50px;
+		-ms-flex-basis: 50px;
+		flex-basis: 50px;
 		-ms-flex-pack: end;
 		-webkit-justify-content: flex-end;
 		-ms-justify-content: flex-end;

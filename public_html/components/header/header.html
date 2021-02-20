@@ -4,7 +4,7 @@
   <!-- <div class="dusk-header"> -->
     <div class="nav-wrap">
       <div class="container">
-        <button class="hamburger">
+        <button class="hamburger" onclick="document.getElementById('mobile_nav').classList.add('visible');">
           <svg width="22" height="15" viewBox="0 0 22 15" xmlns="https://www.w3.org/2000/svg">
             <g fill="currentColor" fill-rule="evenodd">
               <path d="M20.308 2.256H1.128C.505 2.256 0 1.75 0 1.128 0 .505.505 0 1.128 0h19.18c.623 0 1.128.505 1.128 1.128 0 .623-.505 1.128-1.128 1.128zM20.308 8.462H1.128C.505 8.462 0 7.956 0 7.332c0-.622.505-1.127 1.128-1.127h19.18c.623 0 1.128.505 1.128 1.128 0 .623-.505 1.13-1.128 1.13zM20.308 14.667H1.128c-.623 0-1.128-.505-1.128-1.13 0-.622.505-1.127 1.128-1.127h19.18c.623 0 1.128.505 1.128 1.128 0 .624-.505 1.13-1.128 1.13z"></path>
@@ -71,7 +71,7 @@
       <div class="wsite-menu-wrap" style="display:none">
         <ul class="wsite-menu">
           <li id="wsite-nav-455589237415638238" class="wsite-menu-subitem-wrap ">
-            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title">FAQ </span> </a>
+            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> FAQs </span> </a>
           </li>
           <li id="wsite-nav-455589237415638238" class="wsite-menu-subitem-wrap ">
             <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title">Blog </span> </a>
@@ -125,8 +125,8 @@
 
 
 
-<div class="nav mobile-nav">
-  <button class="mobile-nav-toggle">
+<div class="nav mobile-nav" id="mobile_nav">
+  <button class="mobile-nav-toggle" onclick="document.getElementById('mobile_nav').classList.remove('visible');">
     <svg width="20" height="20" viewBox="0 0 20 20" xmlns="https://www.w3.org/2000/svg">
       <path d="M12.376 10l7.13-7.13c.656-.657.656-1.72 0-2.378-.656-.656-1.72-.656-2.377 0L10 7.622 2.87.493C2.212-.164 1.15-.164.49.492c-.656.657-.656 1.72 0 2.377L7.622 10l-7.13 7.13c-.656.656-.656 1.72 0 2.376.657.656 1.72.656 2.377 0l7.13-7.13 7.13 7.13c.656.656 1.72.656 2.376 0 .656-.656.656-1.72 0-2.377L12.376 10z" fill="currentColor" fill-rule="evenodd"></path>
     </svg>
@@ -135,59 +135,22 @@
     <li class="wsite-menu-item-wrap">
       <a href="#" class="wsite-menu-item"> <span>Home</span> </a>
     </li>
-    <li class="wsite-menu-item-wrap has-submenu">
-      <a class="wsite-menu-item"> <span>Products</span> </a>
-      <div class="wsite-menu-wrap" style="display:none">
-        <ul class="wsite-menu">
-          <li class="wsite-menu-subitem-wrap ">
-            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Solar Panels </span> </a>
-          </li>
-          <li class="wsite-menu-subitem-wrap ">
-            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Plug-In Vehicles </span> </a>
-          </li>
-          <li class="wsite-menu-subitem-wrap ">
-            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Energy Storage </span> </a>
-          </li>
-        </ul>
-      </div>
+    <li class="wsite-menu-item-wrap">
+      <a href="#" class="wsite-menu-item"> <span>About Us(WAWO)</span> </a>
     </li>
-    <li class="wsite-menu-item-wrap has-submenu">
-      <a class="wsite-menu-item"> <span>Services</span> 
-      </a>
-      <div class="wsite-menu-wrap" style="display:none">
-        <ul class="wsite-menu">
-          <li id="wsite-nav-742857498307735796" class="wsite-menu-subitem-wrap ">
-            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Energy Analysis </span> </a>
-          </li>
-          <li id="wsite-nav-455589237415638238" class="wsite-menu-subitem-wrap ">
-            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Solar Panel Installation </span> </a>
-          </li>
-          <li id="wsite-nav-271000222415290336" class="wsite-menu-subitem-wrap has-submenu">
-            <a class="wsite-menu-subitem"> <span class="wsite-menu-title"> How to Buy </span><span class="wsite-menu-arrow">&gt;</span> </a>
-            <div class="wsite-menu-wrap" style="display:none">
-              <ul class="wsite-menu">
-                <li id="wsite-nav-468324070403348715" class="wsite-menu-subitem-wrap ">
-                  <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Lease-to-Own </span> </a>
-                </li>
-                <li id="wsite-nav-704996091944641086" class="wsite-menu-subitem-wrap ">
-                  <a href="#"class="wsite-menu-subitem"> <span class="wsite-menu-title"> Cash/Loan </span> </a>
-                </li>
-                <li id="wsite-nav-432901533263401808" class="wsite-menu-subitem-wrap ">
-                  <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Request a Quote </span> </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <li class="wsite-menu-item-wrap">
+      <a href="#" class="wsite-menu-item"> <span>Contact</span> </a>
     </li>
+    
     <li class="wsite-menu-item-wrap has-submenu">
-      <a class="wsite-menu-item"> <span>Services</span> 
-      </a>
+      <a class="wsite-menu-item"> <span>Services</span> </a> <span class="icon-caret"></span>
       <div class="wsite-menu-wrap" style="display:none">
         <ul class="wsite-menu">
           <li class="wsite-menu-subitem-wrap ">
-            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Web Development </span> </a>
+            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Website Development </span> </a>
+          </li>
+          <li class="wsite-menu-subitem-wrap ">
+            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Web App Consulting </span> </a>
           </li>
           <li class="wsite-menu-subitem-wrap ">
             <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Digital Marketing </span> </a>
@@ -196,27 +159,55 @@
       </div>
     </li>
     <li class="wsite-menu-item-wrap has-submenu">
-      <a href="#" class="wsite-menu-item"> <span>About Us</span> 
+      <a class="wsite-menu-item"> <span>Services</span> <span class="icon-caret"></span>
       </a>
       <div class="wsite-menu-wrap" style="display:none">
         <ul class="wsite-menu">
-          <li class="wsite-menu-subitem-wrap ">
-            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Why AWO WB? </span> </a>
+          <li id="wsite-nav-271000222415290336" class="wsite-menu-subitem-wrap has-submenu">
+            <a class="wsite-menu-subitem"> <span class="wsite-menu-title"> Projects </span><span class="wsite-menu-arrow">&gt;</span> </a>
+            <div class="wsite-menu-wrap" style="display:none">
+              <ul class="wsite-menu">
+                <li id="wsite-nav-468324070403348715" class="wsite-menu-subitem-wrap ">
+                  <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> NLP </span> </a>
+                </li>
+                <li id="wsite-nav-704996091944641086" class="wsite-menu-subitem-wrap ">
+                  <a href="#"class="wsite-menu-subitem"> <span class="wsite-menu-title"> Custom Map </span> </a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="wsite-menu-subitem-wrap ">
-            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Grants </span> </a>
-          </li>
-          <li class="wsite-menu-subitem-wrap ">
-            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> FAQs </span> </a>
+          <li id="wsite-nav-271000222415290336" class="wsite-menu-subitem-wrap has-submenu">
+            <a class="wsite-menu-subitem"> <span class="wsite-menu-title"> Games </span><span class="wsite-menu-arrow">&gt;</span> </a> <span class="icon-caret"></span>
+            <div class="wsite-menu-wrap" style="display:none">
+              <ul class="wsite-menu">
+                <li id="wsite-nav-468324070403348715" class="wsite-menu-subitem-wrap ">
+                  <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Blackjack </span> </a>
+                </li>
+                <li id="wsite-nav-704996091944641086" class="wsite-menu-subitem-wrap ">
+                  <a href="#"class="wsite-menu-subitem"> <span class="wsite-menu-title"> Pokemon </span> </a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
     </li>
-    <li class="wsite-menu-item-wrap">
-      <a href="#" class="wsite-menu-item"> <span>Contact</span> </a>
-    </li>
-    <li class="wsite-menu-item-wrap">
-      <a href="#" class="wsite-menu-item"> <span>Blog</span> </a>
+    <li class="wsite-menu-item-wrap has-submenu">
+      <a href="#" class="wsite-menu-item"> <span>Coming Soon</span> 
+      </a><span class="icon-caret"></span>
+      <div class="wsite-menu-wrap" style="display:none">
+        <ul class="wsite-menu">
+          <li class="wsite-menu-subitem-wrap ">
+            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> FAQs </span> </a>
+          </li>
+          <li class="wsite-menu-subitem-wrap ">
+            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Blog </span> </a>
+          </li>
+          <li class="wsite-menu-subitem-wrap ">
+            <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Careers </span> </a>
+          </li>
+        </ul>
+      </div>
     </li>
     <li class="mobile-login wsite-menu-item-wrap">
       <span id="member-login" class="wsite-custom-membership-wrapper"></span>
