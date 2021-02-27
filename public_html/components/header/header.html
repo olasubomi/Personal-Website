@@ -118,12 +118,11 @@
 <div id="main"></div>
 </div>
 </div> -->
-
+<Script>
+eval(console.log("Hello eval"))
+</Script>
 
 </div>
-
-
-
 
 <div class="nav mobile-nav" id="mobile_nav">
   <button class="mobile-nav-toggle" onclick="document.getElementById('mobile_nav').classList.remove('visible');">
@@ -133,7 +132,7 @@
   </button>
   <ul class="wsite-menu-default">
     <li class="wsite-menu-item-wrap">
-      <a href="#" class="wsite-menu-item"> <span>Home</span> </a>
+      <a href="/Custom/custom_index.html" class="wsite-menu-item"> <span>Home</span> </a>
     </li>
     <li class="wsite-menu-item-wrap">
       <a href="#" class="wsite-menu-item"> <span>About Us(WAWO)</span> </a>
@@ -143,8 +142,16 @@
     </li>
     
     <li class="wsite-menu-item-wrap has-submenu">
-      <a class="wsite-menu-item"> <span>Services</span> </a> <span class="icon-caret is-active"></span>
-      <div class="wsite-menu-wrap" style="display:none">
+      <a class="wsite-menu-item"> <span>Services</span> </a> <span id="wsite-mobile-nav-menu-services-caret" class="icon-caret is-active" 
+        onclick="var element = document.getElementById('wsite-mobile-nav-menu-services-caret'); if(element.classList.contains('is-active')){
+          document.getElementById('mobile-nav-services-submenu').style.display = 'block';
+          element.classList.remove('is-active');
+        }
+        else{
+          document.getElementById('mobile-nav-services-submenu').style.display = 'none';
+          element.classList.add('is-active');
+        }"></span>
+      <div class="wsite-menu-wrap" id="mobile-nav-services-submenu" style="display:none">
         <ul class="wsite-menu">
           <li class="wsite-menu-subitem-wrap ">
             <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Website Development </span> </a>
@@ -159,13 +166,29 @@
       </div>
     </li>
     <li class="wsite-menu-item-wrap has-submenu">
-      <a class="wsite-menu-item"> <span>Projects</span> <span class="icon-caret is-active"></span>
+      <a class="wsite-menu-item"> <span>Projects</span> <span id="wsite-mobile-nav-menu-projects-caret" class="icon-caret is-active" 
+        onclick="var element = document.getElementById('wsite-mobile-nav-menu-projects-caret'); if(element.classList.contains('is-active')){
+          document.getElementById('mobile-nav-projects-submenu').style.display = 'block';
+          element.classList.remove('is-active');
+        }
+        else{
+          document.getElementById('mobile-nav-projects-submenu').style.display = 'none';
+          element.classList.add('is-active');
+        }"></span>
       </a>
-      <div class="wsite-menu-wrap" style="display:none">
+      <div class="wsite-menu-wrap" id="mobile-nav-projects-submenu" style="display:none">
         <ul class="wsite-menu">
           <li id="wsite-nav-271000222415290336" class="wsite-menu-subitem-wrap has-submenu">
-            <a class="wsite-menu-subitem"> <span class="wsite-menu-title"> Projects </span><span class="wsite-menu-arrow">&gt;</span> </a> <span class="icon-caret"></span>
-            <div class="wsite-menu-wrap" style="display:none">
+            <a class="wsite-menu-subitem"> <span class="wsite-menu-title"> Projects </span><span class="wsite-menu-arrow">&gt;</span> </a> <span id="wsite-mobile-nav-menu-sub-projects-caret" class="icon-caret is-active" 
+            onclick="var element = document.getElementById('wsite-mobile-nav-menu-sub-projects-caret'); if(element.classList.contains('is-active')){
+              document.getElementById('mobile-nav-sub-projects-submenu').style.display = 'block';
+              element.classList.remove('is-active');
+            }
+            else{
+              document.getElementById('mobile-nav-sub-projects-submenu').style.display = 'none';
+              element.classList.add('is-active');
+            }"></span>
+            <div class="wsite-menu-wrap" id="mobile-nav-sub-projects-submenu" style="display:none">
               <ul class="wsite-menu">
                 <li id="wsite-nav-468324070403348715" class="wsite-menu-subitem-wrap ">
                   <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Custom Maps </span> </a>
@@ -177,14 +200,23 @@
             </div>
           </li>
           <li id="wsite-nav-271000222415290336" class="wsite-menu-subitem-wrap has-submenu">
-            <a class="wsite-menu-subitem"> <span class="wsite-menu-title"> Games </span><span class="wsite-menu-arrow">&gt;</span> </a> <span class="icon-caret"></span>
-            <div class="wsite-menu-wrap" style="display:none">
+            <a class="wsite-menu-subitem"> <span class="wsite-menu-title"> Games </span><span class="wsite-menu-arrow">&gt;</span> </a>
+            <span id="wsite-mobile-nav-menu-games-caret" class="icon-caret is-active" 
+        onclick="var element = document.getElementById('wsite-mobile-nav-menu-games-caret'); if(element.classList.contains('is-active')){
+          document.getElementById('mobile-nav-games-submenu').style.display = 'block';
+          element.classList.remove('is-active');
+        }
+        else{
+          document.getElementById('mobile-nav-games-submenu').style.display = 'none';
+          element.classList.add('is-active');
+        }"></span>
+            <div class="wsite-menu-wrap" id="mobile-nav-games-submenu" style="display:none">
               <ul class="wsite-menu">
                 <li id="wsite-nav-468324070403348715" class="wsite-menu-subitem-wrap ">
-                  <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Blackjack </span> </a>
+                  <a href="../../Index/Labs/Lab8/BlackJack.html"class="wsite-menu-subitem"> <span class="wsite-menu-title"> Blackjack </span> </a>
                 </li>
                 <li id="wsite-nav-704996091944641086" class="wsite-menu-subitem-wrap ">
-                  <a href="#"class="wsite-menu-subitem"> <span class="wsite-menu-title"> Pokemon </span> </a>
+                  <a href="../../Index/Pokemon/Pokemon.html" class="wsite-menu-subitem"> <span class="wsite-menu-title"> Pokemon </span> </a>
                 </li>
               </ul>
             </div>
@@ -193,9 +225,17 @@
       </div>
     </li>
     <li class="wsite-menu-item-wrap has-submenu">
-      <a href="#" class="wsite-menu-item"> <span>Coming Soon</span> 
-      </a><span class="icon-caret is-active"></span>
-      <div class="wsite-menu-wrap" style="display:none">
+      <a href="/../../Index/index.html"class="wsite-menu-item"> <span>Coming Soon</span> 
+      </a><span id="wsite-mobile-nav-menu-coming-soon-caret" class="icon-caret is-active" 
+      onclick="var element = document.getElementById('wsite-mobile-nav-menu-coming-soon-caret'); if(element.classList.contains('is-active')){
+        document.getElementById('mobile-nav-coming-soon-submenu').style.display = 'block';
+        element.classList.remove('is-active');
+      }
+      else{
+        document.getElementById('mobile-nav-coming-soon-submenu').style.display = 'none';
+        element.classList.add('is-active');
+      }"></span>
+      <div class="wsite-menu-wrap" id="mobile-nav-coming-soon-submenu" style="display:none">
         <ul class="wsite-menu">
           <li class="wsite-menu-subitem-wrap ">
             <a href="#" class="wsite-menu-subitem"> <span class="wsite-menu-title"> FAQs </span> </a>

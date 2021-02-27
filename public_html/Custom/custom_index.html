@@ -48,7 +48,6 @@
 
 	<script>
 
-	text="Hello World...";
 	destination = "welcome_note";
 	startTyping(text, 100, destination);
 	
@@ -64,7 +63,6 @@
 
 	function type()
 	{
-	console.log("Comes in type");
 	if (document.getElementById)
 	{
 	    //var dest=document.getElementById(destination);
@@ -72,11 +70,11 @@
 	    //{
 
 		if(text_writing){
-			console.log(document.getElementById(destination).innerHTML);
+			// console.log(document.getElementById(destination).innerHTML);
 
 	      		document.getElementById(destination).innerHTML=text.substr(0, currentChar);
 
-			console.log(document.getElementById(destination).innerHTML);
+			// console.log(document.getElementById(destination).innerHTML);
 
 	      		++currentChar;
 		}
@@ -144,6 +142,7 @@
 
 <body style="background-color: black;">
 <header></header>
+
 <script>
 	fetch("../components/header/header.html")
 		.then(response => {

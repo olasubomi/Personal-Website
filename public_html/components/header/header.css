@@ -653,6 +653,9 @@ body.header-compressed.more-nav-on .desktop-nav .wsite-menu-item {
 	text-transform: none !important;
 	letter-spacing: 0px !important
 }
+.wsite-menu a {
+	font-family: "Open Sans" !important
+}
 .wsite-menu-default a {
     font-size: 16px !important
 }
