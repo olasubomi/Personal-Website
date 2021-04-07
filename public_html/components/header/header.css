@@ -28,7 +28,7 @@ body.reveal-elements .dusk-header {
 	opacity: 1
 }
 
-body.sticky-nav-on .dusk-header {
+body.sticky-nav-on .sticky-nav-on {
 	position: fixed;
 	top: 0;
 	left: 0;
