@@ -28,12 +28,12 @@ body.reveal-elements .dusk-header {
 	opacity: 1
 }
 
-.sticky-nav-on{
+body.sticky-nav-on .dusk-header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #FAFAFA;
+	background-color: #FAFAFA
 }
 /* .dusk-header::after {
 	position: absolute;
