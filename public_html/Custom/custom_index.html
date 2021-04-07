@@ -47,10 +47,12 @@
 	</style>
 
 	<script>
-
+	text="Hello World...";
 	destination = "welcome_note";	
+	startTyping(text, 100, destination);
+
 	console.log("starts javascript");
-	var text = "";
+	var text;
 	var delay;
 	var currentChar;
 	var destination;
@@ -58,11 +60,10 @@
 	var text_writing = 1;
 	//to create a cursor and give the illusion of a live cursor
 	var blinking_cursor = 2; 
-	startTyping(text, 100, destination);
 
 	function type()
 	{
-	// if (document.getElementById){
+	if (document.getElementById){
 	    //var dest=document.getElementById(destination);
 	    //if (dest)
 	    //{
@@ -89,7 +90,7 @@
 		//we want to change the focus from hello world to the cursor
 		text = "  _";
 		destination = "cursor";
-		console.log("char is > text length");
+		// console.log("char is > text length");
 
 		if(blinking_cursor != 1){
 			blinking_cursor = 1;
