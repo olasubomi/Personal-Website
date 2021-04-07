@@ -113,10 +113,9 @@
 	        setTimeout("type()", 100);
 	      }
 	    //}
-	//   }
+	  }
 	}
-	function startTyping(textParam, delayParam, destinationParam)
-	{
+	function startTyping(textParam, delayParam, destinationParam){
 	console.log("Comes in startTyping funtion");
 	  text=textParam;
 	  delay=delayParam;
@@ -135,6 +134,7 @@
 	    e.preventDefault();
 	  });
 	});
+
 	</script>
 		<!-- <link rel="stylesheet" href="../components/footer/footer3cut.css"> -->
 		<link rel="stylesheet" href="../components/header/header.css">
@@ -157,7 +157,7 @@
 <a id = 'welcome_note'; style = "color: rgb(0,255,0); font-family: courier;"> </a>
 <a id = 'cursor'; style = "color: rgb(0,255,0); font-family: courier;"> </a>
 
-<video width="100px" height="100px" controls autoplay>
+<video width="100px" height="100px" controls autoplay loop>
 	<source src="../assets/videos/world-anime.mp4" type="video/mp4">
   Your browser does not support the video tag.
   </video>
