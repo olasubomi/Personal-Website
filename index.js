@@ -15,21 +15,21 @@ var config = {
 
 var app =express();
 
-// app.get('/*', function (req, res, next) {
+app.get('/*', function (req, res, next) {
 
-//     if (req.url.indexOf("/images/") === 0 || req.url.indexOf("/stylesheets/") === 0) {
-//       res.setHeader("Cache-Control", "public, max-age=2592000");
-//       res.setHeader("Expires", new Date(Date.now() + 2592000000).toUTCString());
-//     }
-//     next();
-//   });
+    if (req.url.indexOf("/images/") === 0 || req.url.indexOf("/stylesheets/") === 0) {
+      res.setHeader("Cache-Control", "public, max-age=2592000");
+      res.setHeader("Expires", new Date(Date.now() + 2592000000).toUTCString());
+    }
+    next();
+  });
 
-app.use(express.static(__dirname + '/public', {
-    maxAge: 86400000,
-    setHeaders: function(res, path) {
-        res.setHeader("Expires", new Date(Date.now() + 2592000000*30).toUTCString());
-        }
-}))
+// app.use(express.static(__dirname + '/public', {
+//     maxAge: 86400000,
+//     setHeaders: function(res, path) {
+//         res.setHeader("Expires", new Date(Date.now() + 2592000000*30).toUTCString());
+//         }
+// }))
 
 app.use(express.static(path.join(__dirname, 'public_html'))).set('view engine', 'ejs').get('/', function (req, res) {
     return res.render('pages/index');
