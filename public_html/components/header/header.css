@@ -1,7 +1,7 @@
 .wrapper {
 	position: relative;
 	width: 100%;
-	overflow: none
+	overflow: auto
 }
 
 body.wsite-checkout-page .dusk-header {
@@ -182,7 +182,7 @@ body.header-compressed .dusk-header .logo img {
 }
 
 .logo .wsite-logo {
-	vertical-align: auto !important
+	vertical-align: middle !important
 }
 .logo a {
 	font-family: "Poppins", sans-serif;

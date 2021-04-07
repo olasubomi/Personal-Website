@@ -243,7 +243,7 @@ body.wsite-checkout-page .dusk-header {
 	transition: transform 0.3s ease-out;
 	-webkit-transition: opacity 0.6s ease-in 0.3s transform 0.3s ease-out;
 	-o-transition: opacity 0.6s ease-in 0.3s transform 0.3s ease-out;
-	transition: opacity 0.6s ease-in 0.3s transform 0.3s ease-out;
+	/* transition: opacity 0.6s ease-in 0.3s transform 0.3s ease-out; */
 	position: relative;
 	width: 100%;
 	z-index: 13;
@@ -314,7 +314,7 @@ body.header-compressed .dusk-header .footer-container {
 	line-height: 1
 }
 .dusk-header .logo .wsite-logo {
-	vertical-align: auto !important
+	vertical-align: middle !important
 }
 .dusk-header .logo a {
 	font-family: "Poppins", sans-serif;
@@ -1104,13 +1104,13 @@ div.paragraph ol li {
  */
 
 @-ms-viewport {
-	width: device-width;
+	width: device-width
 }
 @-o-viewport {
-	width: device-width;
+	width: device-width
 }
 @viewport {
-	width: device-width;
+	width: device-width
 }
 #wsite-content div.paragraph,
 #wsite-content p,
