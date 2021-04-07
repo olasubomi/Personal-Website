@@ -2,7 +2,7 @@
 
 <html lang="en-US">
 <head>
-<title> Hello World :) </title>
+<title> AWO Web Brands :) </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1", shrink-to-fit="no">
 
@@ -63,8 +63,7 @@
 
 	function type()
 	{
-	if (document.getElementById)
-	{
+	// if (document.getElementById){
 	    //var dest=document.getElementById(destination);
 	    //if (dest)
 	    //{
@@ -112,7 +111,7 @@
 	        setTimeout("type()", 100);
 	      }
 	    //}
-	  }
+	//   }
 	}
 	function startTyping(textParam, delayParam, destinationParam)
 	{
@@ -121,9 +120,8 @@
 	  delay=delayParam;
 	  currentChar=0;
 	  destination=destinationParam;
-	console.log("Calls type");
 	  type();
-
+	  console.log("Called type");
 	}
 
 // <!-- dropdown menu togglability function on navbar -->
@@ -157,7 +155,7 @@
 <a id = 'welcome_note'; style = "color: rgb(0,255,0); font-family: courier;"> </a>
 <a id = 'cursor'; style = "color: rgb(0,255,0); font-family: courier;"> </a>
 
-<video width="100px" height="100px" controls>
+<video width="100px" height="100px" controls autoplay>
 	<source src="../assets/videos/world-anime.mp4" type="video/mp4">
   Your browser does not support the video tag.
   </video>
