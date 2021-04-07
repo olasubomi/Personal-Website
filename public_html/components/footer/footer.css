@@ -1104,13 +1104,13 @@ div.paragraph ol li {
  */
 
 @-ms-viewport {
-	width: device-width
+	width:  100%
 }
 @-o-viewport {
-	width: device-width
+	width:  100%
 }
 @viewport {
-	width: device-width
+	width: 100%
 }
 #wsite-content div.paragraph,
 #wsite-content p,
