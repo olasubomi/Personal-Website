@@ -27,12 +27,13 @@ body.wsite-checkout-page .dusk-header {
 body.reveal-elements .dusk-header {
 	opacity: 1
 }
-body.sticky-nav-on .dusk-header {
+
+.sticky-nav-on{
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #FAFAFA
+	background-color: #FAFAFA;
 }
 /* .dusk-header::after {
 	position: absolute;
@@ -68,7 +69,7 @@ body.sticky-nav-on .dusk-header {
 	-webkit-transition: height 0.2s ease;
 	-o-transition: height 0.2s ease;
 	transition: height 0.2s ease;
-	height: 120px
+	height: 100px
 }
 
 body.header-compressed .dusk-header .container {
