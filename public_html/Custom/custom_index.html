@@ -11,7 +11,7 @@
 
 <!-- jquery for navbar dropdown submenu actions -->
  <script async defer="defer" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script async defer="defer" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" href="stylesheets/panel.css">
 	<style>
@@ -48,11 +48,9 @@
 
 	<script>
 
-	destination = "welcome_note";
-	startTyping(text, 100, destination);
-	
+	destination = "welcome_note";	
 	console.log("starts javascript");
-	var text;
+	var text = "";
 	var delay;
 	var currentChar;
 	var destination;
@@ -60,6 +58,7 @@
 	var text_writing = 1;
 	//to create a cursor and give the illusion of a live cursor
 	var blinking_cursor = 2; 
+	startTyping(text, 100, destination);
 
 	function type()
 	{
@@ -69,7 +68,7 @@
 	    //{
 
 		if(text_writing){
-			// console.log(document.getElementById(destination).innerHTML);
+			console.log("Text writing is true");
 
 	      		document.getElementById(destination).innerHTML=text.substr(0, currentChar);
 
@@ -90,6 +89,8 @@
 		//we want to change the focus from hello world to the cursor
 		text = "  _";
 		destination = "cursor";
+		console.log("char is > text length");
+
 		if(blinking_cursor != 1){
 			blinking_cursor = 1;
 			document.getElementById(destination).innerHTML = '&nbsp';
