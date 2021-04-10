@@ -386,7 +386,7 @@ body.mobile-nav-open {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
-	background-image: url(../../assets/img/arrow-light.svg) no-repeat center center
+	background: url(../../assets/img/arrow-light.svg) no-repeat center center
 }
 body.wsite-theme-dark .mobile-nav .icon-caret {
 	background-image: url(../../assets/img/arrow-light.svg)
@@ -604,18 +604,18 @@ body.header-compressed.more-nav-on .desktop-nav .wsite-menu-item {
 
 .desktop-nav .wsite-phone {
 	float: right;
-	/* height: 120px; */
-	/* line-height: 120px; */
+	height: 120px;
+	line-height: 120px;
 	font-family: "Poppins", sans-serif;
 	color: #717170;
 }
-/* .header-compressed.more-nav-on .desktop-nav .wsite-phone { */
-	/* height: 80px; */
-	/* line-height: 80px */
-/* } */
+.header-compressed.more-nav-on .desktop-nav .wsite-phone {
+	height: 80px;
+	line-height: 80px
+}
 .desktop-nav .wsite-phone a {
-	display: inline-block;
-	letter-spacing: 0;
+	/* display: inline-block; */
+	/* letter-spacing: 0; */
 	color: #db8c0a
 }
 .desktop-nav .wsite-phone a:hover {
