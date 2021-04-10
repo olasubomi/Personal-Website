@@ -808,14 +808,15 @@ body.wsite-theme-dark .mobile-nav .icon-caret {
 #wsite-section-content .footer-container {
 	overflow: hidden
 }
-.left {
+/* Styling overwriting link in about me carousel section */
+/* .left {
 	float: left;
 	width: 20%
 }
 .right {
 	float: right;
 	width: 80%
-}
+} */
 .style {
 	background: #f6f7f9;
 	padding: 1em;

@@ -1,3 +1,6 @@
 node_modules
+.DS_Store
+package-lock.json
+public_html/.DS_Store
 public_html/components/header/header2.css
 public_html/components/header/header2.html
