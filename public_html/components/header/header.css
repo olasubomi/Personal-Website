@@ -1,7 +1,8 @@
 .wrapper {
 	position: relative;
 	width: 100%;
-	overflow: visible
+	overflow: visible;
+	z-index: 1;
 }
 
 body.wsite-checkout-page .dusk-header {
@@ -614,8 +615,8 @@ body.header-compressed.more-nav-on .desktop-nav .wsite-menu-item {
 	line-height: 80px
 }
 .desktop-nav .wsite-phone a {
-	/* display: inline-block; */
-	/* letter-spacing: 0; */
+	display: inline-block;
+	letter-spacing: 0;
 	color: #db8c0a
 }
 .desktop-nav .wsite-phone a:hover {
