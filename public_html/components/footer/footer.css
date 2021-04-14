@@ -225,7 +225,7 @@ body.sticky-nav-on .site-canvas {
 }
 .footer-container {
 	width: 100%;
-	max-width: 1170px;
+	/* max-width:90%; */
 	padding-right: 15px;
 	padding-left: 15px;
 	margin: 0 auto;
@@ -853,11 +853,13 @@ p {
 .footer-wrap {
 	width: 100%;
 	border-top: 1px solid #e5e5e5;
-	background-color: #fafafa
+	background-color: #fafafa;
+	/* this creates a fixed fotter position for footer */
+	/* position: fixed; */
+	bottom: 0;
 }
 .footer-wrap .wsite-footer {
 	max-width: 100%;
-	width: 1024px;
 	margin: 0 auto;
 	padding: 40px 0 20px;
 	box-sizing: border-box
