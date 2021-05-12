@@ -2,28 +2,12 @@
 	position: relative;
 	width: 100%;
 	overflow: visible;
-	z-index: 1;
+	z-index: 100;
 }
 
 body.wsite-checkout-page .dusk-header {
 	position: absolute !important
 }
-
-/* .dusk-header {
-	-webkit-transition: transform 0.3s ease-out;
-	-o-transition: transform 0.3s ease-out;
-	transition: transform 0.3s ease-out;
-	-webkit-transition: opacity 0.6s ease-in 0.3s transform 0.3s ease-out;
-	-o-transition: opacity 0.6s ease-in 0.3s transform 0.3s ease-out;
-	transition: opacity 0.6s ease-in 0.3s transform 0.3s ease-out;
-	position: relative;
-	width: 100%;
-	z-index: 13;
-	box-sizing: border-box;
-	background: #fff;
-	opacity: 0
-} */
-
 
 body.reveal-elements .dusk-header {
 	opacity: 1
@@ -299,6 +283,7 @@ body.header-compressed .logo img {
 	margin-right: 30px;
 	position: relative;
 	display: block;
+	z-index: 100
 }
 
 body.mobile-nav-open {
@@ -310,7 +295,7 @@ body.mobile-nav-open {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 14;
+	z-index: 100;
 	-webkit-flex-direction: column;
 	-ms-flex-direction: column;
 	flex-direction: column;
@@ -352,7 +337,8 @@ body.mobile-nav-open {
 	flex-grow: 2;
 	padding: 0 40px 40px;
 	overflow-y: auto;
-	text-align: center
+	text-align: center;
+	z-index: 100;
 }
 .mobile-nav a {
 	text-decoration: none
@@ -540,7 +526,7 @@ body.header-compressed.more-nav-on .desktop-nav .wsite-menu-item {
 	display: block !important;
 	visibility: hidden;
 	opacity: 0;
-	z-index: 1
+	z-index: 100
 }
 .desktop-nav .wsite-menu-wrap .wsite-menu-wrap {
 	top: -1px;
